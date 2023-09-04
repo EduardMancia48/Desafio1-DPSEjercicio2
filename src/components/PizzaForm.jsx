@@ -19,9 +19,9 @@ class PizzaForm extends Component {
     e.preventDefault();
     const { customerName, pizzaSize, extraIngredients } = this.state;
 
-    // Validación mínima: Asegurarse de que el cliente haya ingresado un nombre.
-    if (!customerName) {
-      alert('Por favor, ingrese su nombre.');
+    // Validación del nombre del cliente
+    if (!customerName || customerName.length < 3) {
+      alert('Por favor, ingrese un nombre válido (mínimo 3 caracteres).');
       return;
     }
 
